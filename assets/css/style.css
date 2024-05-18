@@ -1,0 +1,45 @@
+.form-control {
+    width: 50%;
+    
+}
+
+ul {
+    list-style-type: none;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background: #1e3c72;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+button {
+    background-color: transparent;
+    color: #fff;
+    fill: #fff;
+    border: none;
+    /* border-style: ridge; */
+    
+}
+
+.hundurluk {
+    height: 50vh;
+}
+
+.format {
+    
+}
+
+.task {
+    width: 50% ;
+    margin: 0 auto ;
+    background: #FFB75E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+padding: 20px 20px;
+color: #fff;
+
+}
+
