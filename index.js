@@ -30,7 +30,7 @@
 // }
 // salamlaAll("Mesmali")
 
-// // Yadda Saxlayir Parametrli funksiya ifadesi
+// Yadda Saxlayir Parametrli funksiya ifadesi
 // const SalamParametrliFunksiyaIfadesi = function ( ad , soyad) {
 //     console.log(`Salam ,  ${ad}  ${soyad} `)
 // }
@@ -68,30 +68,18 @@
 
 
 const todoInput = document.querySelector("input")
-/* <div class="d-flex my-3 justify-content-between align-items-center task">
-        <li>Noxcalla</li>
-        <div class="buttonlar">
-            <button class="done">
-            <i class="fa-solid fa-check-to-slot"></i>
-        </button>
 
-        <button class="delete">
-            <i class="fa-solid fa-trash"></i>
-        </button>
-    </div>
-    
-    
+const ulTeqi = document.querySelector("ul")
 
 
-        
-    </div> */
+// const divButtonu = document.querySelector()
 
-const todoInputu = document.querySelector("input")
 const addTodoBtn = document.getElementsByClassName("add-butonu")[0]
-console.log(addTodoBtn)
+console.log(addTodoBtn) 
 
 function tapsirigiElaveEt(e) {
     e.preventDefault() ;
+
 
     const taskDivi = document.createElement("div")
     taskDivi.classList.add("d-flex" , "my-3" , "justify-content-between" , "align-items-center" , "task")
@@ -99,17 +87,54 @@ function tapsirigiElaveEt(e) {
     const taskLi = document.createElement("li")
     
     taskLi.innerText = todoInput.value
-    console.log(taskLi)
 
-    const taskbutton = document.createElement("button")
-    taskbutton.classList.add("add-butonu" , "p-3")
+    taskDivi.appendChild(taskLi)
 
-    taskbutton.innerHTML = todoInput.value
-    console.log(taskbutton)
+
+    ulTeqi.appendChild(taskDivi) 
+
+    const buttonlarDivi = document.createElement("div")
+    buttonlarDivi.classList.add("buttonlar")
+    const doneBtn = document.createElement("button")
+    doneBtn.classList.add("tamamlandi")
+
+    doneBtn.innerHTML = "<i class='fa-solid fa-check-to-slot'></i>"
+
+
+    const removeBtn = document.createElement("button")
+    removeBtn.classList.add =("sil")
+
+    removeBtn.innerHTML = '<i class="fa-solid fa-trash"></i>'
+
+    buttonlarDivi.appendChild(doneBtn)
+    buttonlarDivi.appendChild(removeBtn)
+
+    taskDivi.appendChild(buttonlarDivi) 
+
+    
+
+    todoInput.value =""
+
+
+}
+
+function tamamlaVeYaSil(e) {
+    // console.log(e.target)
+    const kiliklediyimizYer = e.target 
+    if(kiliklediyimizYer.classList.contains("fa-check-to-slot")) {
+        kiliklediyimizYer.parentElement.parentElement.parentElement.classList.toggle("done")
+    }
+
+    if(kiliklediyimizYer.classList.contains("fa-trash")) {
+        kiliklediyimizYer.parentElement.parentElement.parentElement.classList.add("delete")
+    }
+
 }
 
 addTodoBtn.addEventListener  ("click",tapsirigiElaveEt)  //undefined
 // Hoisting
+
+ulTeqi.addEventListener("click" , tamamlaVeYaSil)
 
 
 

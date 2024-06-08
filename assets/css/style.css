@@ -6,6 +6,8 @@
 ul {
     list-style-type: none;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
 }
 
 body {
@@ -25,7 +27,7 @@ button {
 }
 
 .hundurluk {
-    height: 50vh;
+    height: 120px;
 }
 
 .format {
@@ -38,8 +40,46 @@ button {
     background: #FFB75E;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-padding: 20px 20px;
+padding: 40px 20px;
 color: #fff;
+transition: 1.3s ease;
 
 }
+
+
+
+.testimonials-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-button {
+    display: flex;
+    gap: 10px; /* Düymələr arasında boşluq */
+    margin-left: auto; /* Sol tərəfə mümkün qədər yaxın olsun */
+}
+
+.navigation-button button {
+    background: none; /* Arxa planı aradan qaldırmaq */
+    border: none; /* Sərhədi aradan qaldırmaq */
+    cursor: pointer; /* Əl kursoru */
+}
+
+
+
+
+.done {
+    opacity: .3;
+    text-decoration: line-through;
+    /* transform: scale(0.4); */
+}
+
+.delete {
+/* transform: scale(0); */
+display: none !important;
+}
+
+
+
 
